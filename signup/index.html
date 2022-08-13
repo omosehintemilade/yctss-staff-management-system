@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up | Yabatech Staff Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="_section">
+      <img class="_section__logo" src="../assets/yaba.png" />
+      <h4 class="_section__text">Sign Up</h4>
+
+      <form>
+        <label for="email">Email Address</label>
+        <input type="email" name="email" placeholder="johndoe@gmail.com" />
+        <small class="email_error">Email is required</small>
+        <label for="phonenumber">Phone Number</label>
+        <input type="tel" name="phonenumber" placeholder="0812 345 6789" />
+        <small class="phonenumber_error">Phone number is required</small>
+
+        <label for="password">Password</label>
+        <input type="password" name="password" placeholder="********" />
+        <small class="password_error">Password is required</small>
+        <label for="confirmpassword">Confirm Password</label>
+        <input type="password" name="confirmpassword" placeholder="********" />
+        <small class="confirmpassword_error">Password does not match</small>
+      </form>
+      <div class="_section__btn-wrapper">
+        <!-- <button class="_button"><a href="../login/">Sign Up</a></button> -->
+        <button id="signup" class="_button">Sign Up</button>
+      </div>
+    </section>
+
+    <script src="../main.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

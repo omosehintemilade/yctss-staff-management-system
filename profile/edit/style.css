@@ -1,0 +1,54 @@
+.profile__wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.profile_img {
+  border: 6px solid green;
+  border-radius: 50%;
+  object-fit: cover;
+  height: 180px;
+  width: 180px;
+}
+
+form {
+  flex: 1;
+  margin-bottom: 10px;
+}
+
+.img_wrapper {
+  position: relative;
+}
+
+.change_btn_wrapper {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #00000045;
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  border-radius: 50%;
+  /* display: grid; */
+  place-content: center;
+}
+
+.change_btn_wrapper label {
+  display: block;
+  background-color: var(--green);
+  outline: none;
+  border: 2px solid var(--green);
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: white;
+}
+
+input[name="file"] {
+  display: none;
+  /* opacity: 0; */
+}

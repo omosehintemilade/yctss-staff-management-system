@@ -1,0 +1,22 @@
+._section {
+  text-align: center;
+  color: var(--black);
+  background-color: var(--white);
+  padding: 20px 24px;
+  border-radius: 8px;
+}
+
+._section__logo {
+  margin-bottom: 10px;
+  width: 20%;
+}
+
+._section__text {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+form {
+  max-width: 90%;
+  margin: 10px auto;
+}
