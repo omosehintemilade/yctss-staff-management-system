@@ -5,6 +5,9 @@ console.log({ user });
 
 console.log({ image });
 
+// Append Sinppets
+appendProfileSnippet();
+
 //   User is yet to provide their detailss
 if (!user.surname) {
   window.location.replace("/biodata/edit");

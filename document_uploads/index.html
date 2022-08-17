@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Profile | Yabatech Staff Portal</title>
+    <title>Educational Qualifications | Yabatech Staff Portal</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -30,11 +30,12 @@
 
         <div class="">
           <!-- <p class="selected_doc">O'level Certificate</p> -->
-          <h6 class="selected_doc">File Title</h6>
+          <h6>File Title</h6>
           <select name="docs">
+            <option value="">Select Document Type</option>
             <option value="O'level Certificate">O'level Certificate</option>
             <option value="Birth Certificate">Birth Certificate</option>
-            <option value="National Diploma Certificat">
+            <option value="National Diploma Certificate">
               National Diploma Certificate
             </option>
             <option value="Bsc. Certificate">Bsc. Certificate</option>
@@ -56,34 +57,30 @@
             <div class="prev">
               <div class="preview">
                 <img
+                  class="preview_img"
                   src="../assets/placeholder.jpg"
                   alt="A placeholder image"
                 />
               </div>
-              <p>Select file to preview before uploading</p>
+              <p class="selected_doc"></p>
             </div>
 
             <div class="action">
               <label for="myfile">Browse Files</label>
-              <input
-                type="file"
-                id="myfile"
-                name="myfile"
-                accept=".jpg, .jpeg, .png"
-              />
-              <button class="_button btn">Upload</button>
+              <input type="file" id="file" name="file" accept=".jpg, .pdf" />
+              <button id="upload_doc" class="_button btn">Upload</button>
             </div>
           </div>
 
+          <div class="file_header">
+            <div class="li sn">S/N</div>
+            <div class="li fid">File ID</div>
+            <div class="li fn">File Name</div>
+            <div class="li st">Status</div>
+            <div class="li ac">Action</div>
+          </div>
           <div class="file_table">
-            <div class="file_header">
-              <div class="li sn">S/N</div>
-              <div class="li fid">File ID</div>
-              <div class="li fn">File Name</div>
-              <div class="li st">Status</div>
-              <div class="li ac">Action</div>
-            </div>
-            <div class="file_item">
+            <!-- <div class="file_item">
               <div class="li sn">1</div>
               <div class="li fid">12345RFV</div>
               <div class="li fn">O'LEVEL CERTIFICATE</div>
@@ -96,7 +93,7 @@
               <div class="li fn">O'LEVEL CERTIFICATE</div>
               <div class="li">Pending</div>
               <button class="li delete_btn">Delete</button>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>

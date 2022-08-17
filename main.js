@@ -42,3 +42,17 @@ const showToast = (data) => {
     alert(data.message);
   }
 };
+
+const appendProfileSnippet = () => {
+  const profileContainer = document.querySelector(".profile_snippet_container");
+
+  const user = getFromDB();
+
+  profileContainer.innerHTML = `
+<p class="snippet">StaffID: <span>${user.staffId}</span></p>
+<p class="snippet">Status: <span>Active</span></p>
+<p class="snippet">Year Employed: <span>${new Date().getFullYear()}</span></p>
+<p class="snippet">Department: <span>Science</span></p>
+<p class="snippet">Subject: <span>Chemistry</span></p>
+`;
+};

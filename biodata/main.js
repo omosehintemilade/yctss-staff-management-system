@@ -5,9 +5,12 @@ console.log({ user });
 
 console.log({ image });
 
+// Append Sinppets
+appendProfileSnippet();
+
 //   User is yet to provide their detailss
 if (!user.surname) {
-  window.location.replace("/profile/edit");
+  window.location.replace("/biodata/edit");
 } else {
   // We have the user details
   if (user.profile_pics) {

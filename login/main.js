@@ -2,8 +2,8 @@ const inputs = document.querySelectorAll("input");
 const login = document.querySelector("#login");
 
 const values = {
-  emailOrId: "",
-  password: ""
+  emailOrId: "johnsmith@example.com",
+  password: "1234"
 };
 
 inputs.forEach((i) => {

@@ -3,7 +3,6 @@ const selects = document.querySelectorAll("select");
 const edit = document.querySelector("#edit");
 const img_wrapper = document.querySelector(".img_wrapper");
 const change_btn_wrapper = img_wrapper.querySelector(".change_btn_wrapper");
-const fileinput = img_wrapper.querySelector("#file");
 const image = document.querySelector(".profile_img");
 let file = {};
 const values = {};

@@ -1,24 +1,31 @@
-const image = document.querySelector(".profile_img");
+const table = document.querySelector(".ex");
+
+// Append Sinppets
+appendProfileSnippet();
 
 const user = getFromDB();
 console.log({ user });
 
-console.log({ image });
+(async () => {
+  const res = await getExperiences();
+  const content = res.data.map((d) => {
+    return `  <div class="ex_item">
+        <h4>${d.name}</h4>
+        <p>Year: ${d.started} - ${d.ended}</p>
+        <h4>Position Held: ${d.position}</h4>
+        <h4>Subject Taught: ${d.subject}</h4>
+      </div>`;
+  });
 
-//   User is yet to provide their detailss
-if (!user.surname) {
-  window.location.replace("/profile/edit");
-} else {
-  // We have the user details
-  if (user.profile_pics) {
-    image.src = user.profile_pics;
-  }
+  table.innerHTML = content;
+})();
 
-  for (const key in user) {
-    const el = document.querySelector(`.${key}`);
-    // if there's an element with that classname
-    if (el) {
-      el.textContent = user[key];
+async function getExperiences() {
+  const res = await fetch(baseURL + "users/experience", {
+    method: "GET",
+    headers: {
+      token: user.uuid
     }
-  }
+  });
+  return await res.json();
 }
