@@ -8,6 +8,7 @@ console.log({ user });
 
 (async () => {
   const res = await getExperiences();
+  if (!res.data.length) return;
   const content = res.data.map((d) => {
     return `  <div class="ex_item">
         <h4>${d.name}</h4>
@@ -24,6 +25,7 @@ async function getExperiences() {
   const res = await fetch(baseURL + "users/experience", {
     method: "GET",
     headers: {
+      "Content-Type": "application/json;charset=utf-8",
       token: user.uuid
     }
   });

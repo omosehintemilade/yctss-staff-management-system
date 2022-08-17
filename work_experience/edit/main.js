@@ -1,6 +1,8 @@
 const inputs = document.querySelectorAll("input");
 const edit = document.querySelector("#add");
 
+const user = getFromDB();
+console.log({ user });
 const values = {
   name: "Omosehin Ifeoluwa Olayinka",
   started: "62637",
@@ -40,7 +42,8 @@ async function createExperienceFn() {
   const res = await fetch(baseURL + "users/experience/create", {
     method: "POST",
     headers: {
-      "Content-Type": "application/json;charset=utf-8"
+      "Content-Type": "application/json;charset=utf-8",
+      token: user.uuid
     },
     body: JSON.stringify(values)
   });
