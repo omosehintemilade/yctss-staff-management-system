@@ -2,10 +2,10 @@ const inputs = document.querySelectorAll("input");
 const signup = document.querySelector("#signup");
 
 const values = {
-  email: "",
-  phonenumber: "",
-  password: "",
-  confirmpassword: ""
+  email: "johnsmith@example.com",
+  phonenumber: "08103826574",
+  password: "1234",
+  confirmpassword: "1234"
 };
 
 inputs.forEach((i) => {
@@ -16,7 +16,7 @@ inputs.forEach((i) => {
   });
 });
 
-signup.addEventListener("click", () => {
+signup.addEventListener("click", async () => {
   for (const i of inputs) {
     if (!values[i.name]) {
       console.log(i.name);
@@ -36,13 +36,35 @@ signup.addEventListener("click", () => {
   }
 
   const user = {
-    id: generateRandomCode(),
     email: values.email,
     phonenumber: values.phonenumber,
     password: values.password
   };
 
-  saveToDB(user);
+  try {
+    disableBtn("signup");
+    const res = await createUser(user);
+    disableBtn("signup", "Sign Up");
 
-  window.location.replace("/login/");
+    if (!res.success) {
+      showToast(res);
+    } else {
+      //  if request is successful, continue
+      showToast(res);
+      window.location.replace("/login/");
+    }
+  } catch (error) {
+    console.log(error);
+  }
 });
+
+async function createUser(data) {
+  const res = await fetch(baseURL + "users/create", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json;charset=utf-8"
+    },
+    body: JSON.stringify(data)
+  });
+  return await res.json();
+}

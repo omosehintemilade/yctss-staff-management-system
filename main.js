@@ -6,6 +6,14 @@ const saveToDB = (data) => {
   }
 };
 
+const saveToLS = (key, value) => {
+  try {
+    localStorage.setItem(key, JSON.stringify(value));
+  } catch (error) {
+    alert("Couldn't connect to the Database now. Please try again");
+  }
+};
+
 const getFromDB = () => {
   try {
     const data = localStorage.getItem("user");
@@ -15,13 +23,22 @@ const getFromDB = () => {
   }
 };
 
-const generateRandomCode = () => {
-  // Default length is 5 Characters;
-  const length = 5;
-  let code = "";
-  const chars = "7215369480";
-  for (let i = length; i > 0; --i) {
-    code += chars[Math.floor(Math.random() * chars.length)];
+const baseURL = "http://localhost:8000/";
+
+const disableBtn = (btnID, btntext) => {
+  const btn = document.querySelector("#" + btnID);
+  const btnStatus = btn.disabled;
+
+  if (btnStatus) {
+    btn.textContent = btntext;
+  } else {
+    btn.textContent = "Loading...";
   }
-  return code;
+  btn.disabled = !btnStatus;
+};
+
+const showToast = (data) => {
+  if (data.message) {
+    alert(data.message);
+  }
 };

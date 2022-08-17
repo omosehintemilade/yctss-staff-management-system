@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Profile | Yabatech Staff Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="_section">
+      <img class="_section__logo" src="../../assets/yaba.png" />
+      <h4 class="_section__text">Edit BioData</h4>
+
+      <div class="profile__wrapper">
+        <div class="img_wrapper">
+          <div class="change_btn_wrapper">
+            <label for="file">Change Picture</label>
+            <input
+              type="file"
+              id="file"
+              name="file"
+              accept=".jpg, .jpeg, .png"
+            />
+          </div>
+          <img class="profile_img" src="../../assets/user.jpg" />
+        </div>
+
+        <form class="">
+          <label for="title">Title</label>
+          <select name="title">
+            <option value="">-- --</option>
+            <option value="Mr">Mr</option>
+            <option value="Mrs">Mrs</option>
+            <option value="Miss">Miss</option>
+          </select>
+          <small class="title_error">Title must be selected</small>
+
+          <label for="surname">Surname</label>
+          <input type="text" name="surname" placeholder="John" />
+          <small class="surname_error">Surname cannot be empty</small>
+
+          <label for="firstname">First Name</label>
+          <input type="text" name="firstname" placeholder="Doe" />
+          <small class="firstname_error">First Name cannot be empty</small>
+
+          <label for="lastname">Last Name</label>
+          <input type="text" name="lastname" placeholder="Doe" />
+          <small class="lastname_error">Last Name cannot be empty</small>
+
+          <label for="dob">Date of Birth</label>
+          <input type="date" name="dob" placeholder="Date of birth" />
+          <small class="dob_error"> Date of birth cannot be empty</small>
+
+          <label for="pob">Place of Birth</label>
+          <input type="text" name="pob" placeholder="Place of Birth" />
+          <small class="pob_error">Place of Birth cannot be empty</small>
+
+          <label for="lga">Local Government Area</label>
+          <input type="text" name="lga" placeholder="Local Government Area" />
+          <small class="lga_error">Local government area cannot be empty</small>
+
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="johndoe@yahoo.com"
+            disabled
+          />
+
+          <label for="genotype">Genotype</label>
+          <select name="genotype">
+            <option value="">-- --</option>
+            <option value="AA">AA</option>
+            <option value="AS">AS</option>
+            <option value="SS">SS</option>
+          </select>
+          <small class="genotype_error">Genotype must be selected</small>
+
+          <label for="bloodgroup">Blood Group</label>
+          <select name="bloodgroup">
+            <option value="">-- --</option>
+            <option value="AB">AB</option>
+            <option value="0">O</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+          </select>
+          <small class="bloodgroup_error">Blood group must be selected</small>
+
+          <label for="phonenumber">Phone Number</label>
+          <input type="tel" name="phonenumber" placeholder="0801 234 5678" />
+          <small class="phonenumber_error">Phone number cannot be empty</small>
+
+          <label for="address">House Address</label>
+          <input name="address" placeholder="House Address" />
+          <small class="address_error">House address cannot be empty</small>
+        </form>
+      </div>
+      <button id="edit" class="_button">Save Data</button>
+    </section>
+
+    <script src="../../main.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

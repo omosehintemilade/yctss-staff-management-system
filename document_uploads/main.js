@@ -7,7 +7,7 @@ console.log({ image });
 
 //   User is yet to provide their detailss
 if (!user.surname) {
-  window.location.replace("/biodata/edit");
+  window.location.replace("/profile/edit");
 } else {
   // We have the user details
   if (user.profile_pics) {

@@ -17,53 +17,32 @@
   <body>
     <section class="_section">
       <img class="_section__logo" src="../../assets/yaba.png" />
-      <h4 class="_section__text">Edit Profile</h4>
+      <h4 class="_section__text">Edit Experience</h4>
 
-      <div class="profile__wrapper">
-
-      <div class="img_wrapper">        
-        <div class="change_btn_wrapper">
-          <label  for="file">Change Picture</label>
-          <input type="file" id="file" name="file" accept=".jpg, .jpeg, .png" >
-        </div>
-        <img class="profile_img" src="../../assets/user.jpg" />
-      </div>
+      <div class="">
         <form class="">
-          <label for="surname">Surname</label>
+          <label for="surname">Name of Workplace</label>
           <input type="text" name="surname" placeholder="John" />
           <small class="surname_error">Surname cannot be empty</small>
 
-          <label for="firstname">First Name</label>
+          <label for="firstname">Year Started</label>
           <input type="text" name="firstname" placeholder="Doe" />
           <small class="firstname_error">First Name cannot be empty</small>
 
-          <label for="lastname">Last Name</label>
+          <label for="lastname">Year Ended</label>
           <input type="text" name="lastname" placeholder="Doe" />
           <small class="lastname_error">Last Name cannot be empty</small>
 
-          <label for="email">Email Address</label>
-          <input
-            type="email"
-            name="email"
-            placeholder="johndoe@yahoo.com"
-            disabled
-          />
+          <label for="lastname">Position Held</label>
+          <input type="text" name="lastname" placeholder="Doe" />
+          <small class="lastname_error">Last Name cannot be empty</small>
 
-          <label for="title">Title</label>
-          <select name="title">
-            <option value="">-- --</option>
-            <option value="Mr">Mr</option>
-            <option value="Mrs">Mrs</option>
-            <option value="Miss">Miss</option>
-          </select>
-          <small class="title_error">Title must be selected</small>
-
-          <label for="phonenumber">Phone Number</label>
-          <input type="tel" name="phonenumber" placeholder="0801 234 5678" />
-          <small class=phonenumber_error">Title must be selected</small>
+          <label for="lastname">Subject Taken</label>
+          <input type="text" name="lastname" placeholder="Doe" />
+          <small class="lastname_error">Last Name cannot be empty</small>
         </form>
       </div>
-        <button id="edit" class="_button">Save Data</button>
+      <button id="edit" class="_button">Add Experience</button>
     </section>
 
     <script src="../../main.js"></script>

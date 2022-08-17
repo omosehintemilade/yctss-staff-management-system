@@ -14,7 +14,7 @@ inputs.forEach((i) => {
   });
 });
 
-login.addEventListener("click", () => {
+login.addEventListener("click", async () => {
   for (const i of inputs) {
     if (!values[i.name]) {
       console.log(i.name);
@@ -25,14 +25,38 @@ login.addEventListener("click", () => {
     }
   }
 
-  const user = getFromDB();
-  console.log({ user });
+  console.log({ values });
+  try {
+    disableBtn("login");
+    const res = await loginFn({
+      id: values.emailOrId,
+      email: values.emailOrId,
+      password: values.password
+    });
 
-  if (values.emailOrId != user.email && values.emailOrId != user.id) {
-    alert("Email Address or Staff ID not registered with us");
-  } else if (values.password != user.password) {
-    alert("Wrong Login Credentials");
-  } else {
+    disableBtn("login", "Log In");
+    // Check if request is success
+    if (!res.success) {
+      // showToast(res);
+    } else {
+      //  if request is successful, continue
+      // showToast(res);
+      saveToLS("user", res.user);
+      window.location.replace("/profile/");
+    }
     window.location.replace("/profile/");
+  } catch (error) {
+    console.log(error);
   }
 });
+
+async function loginFn(data) {
+  const res = await fetch(baseURL + "users/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json;charset=utf-8"
+    },
+    body: JSON.stringify(data)
+  });
+  return await res.json();
+}

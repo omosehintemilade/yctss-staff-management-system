@@ -1,12 +1,9 @@
-a {
-  color: black;
-}
-
 .profile__wrapper {
   display: flex;
   gap: 30px;
   align-items: flex-start;
   margin-top: 20px;
+  min-width: 700px;
 }
 
 .profile {
@@ -30,12 +27,27 @@ a {
   width: 180px;
   margin-bottom: 20px;
 }
+.shadow {
+  box-shadow: -1px 0px 15px -2px rgba(0, 0, 0, 0.62);
+}
+
+.border {
+  border: 1px dotted black;
+  border-radius: 4px;
+}
+
+.snippet {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.snippet span {
+  color: #09519d;
+}
 
 .data_card {
   padding: 5px 12px;
   display: flex;
-  align-items: center;
-  gap: 16px;
+  gap: 10px;
   cursor: pointer;
 }
 

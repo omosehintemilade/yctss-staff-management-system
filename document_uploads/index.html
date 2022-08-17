@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile | Yabatech Staff Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="_section">
+      <img class="_section__logo" src="../assets/yaba.png" />
+      <h4 class="_section__text">Upload Documents</h4>
+
+      <div class="profile__wrapper">
+        <div class="profile_image-section">
+          <h4>Required</h4>
+          <p class="docs_count">8</p>
+
+          <h4>Uploads</h4>
+          <p class="docs_count">8</p>
+        </div>
+
+        <div class="">
+          <!-- <p class="selected_doc">O'level Certificate</p> -->
+          <h6 class="selected_doc">File Title</h6>
+          <select name="docs">
+            <option value="O'level Certificate">O'level Certificate</option>
+            <option value="Birth Certificate">Birth Certificate</option>
+            <option value="National Diploma Certificat">
+              National Diploma Certificate
+            </option>
+            <option value="Bsc. Certificate">Bsc. Certificate</option>
+            <option value="Additional Certificate">
+              Additional Certificate
+            </option>
+            <option value="Additional Certificate">
+              Additional Certificate
+            </option>
+            <option value="Additional Certificate">
+              Additional Certificate
+            </option>
+            <option value="Additional Certificate">
+              Additional Certificate
+            </option>
+          </select>
+
+          <div class="cs">
+            <div class="prev">
+              <div class="preview">
+                <img
+                  src="../assets/placeholder.jpg"
+                  alt="A placeholder image"
+                />
+              </div>
+              <p>Select file to preview before uploading</p>
+            </div>
+
+            <div class="action">
+              <label for="myfile">Browse Files</label>
+              <input
+                type="file"
+                id="myfile"
+                name="myfile"
+                accept=".jpg, .jpeg, .png"
+              />
+              <button class="_button btn">Upload</button>
+            </div>
+          </div>
+
+          <div class="file_table">
+            <div class="file_header">
+              <div class="li sn">S/N</div>
+              <div class="li fid">File ID</div>
+              <div class="li fn">File Name</div>
+              <div class="li st">Status</div>
+              <div class="li ac">Action</div>
+            </div>
+            <div class="file_item">
+              <div class="li sn">1</div>
+              <div class="li fid">12345RFV</div>
+              <div class="li fn">O'LEVEL CERTIFICATE</div>
+              <div class="li">Pending</div>
+              <button class="li delete_btn">Delete</button>
+            </div>
+            <div class="file_item">
+              <div class="li sn">1</div>
+              <div class="li fid">12345RFV</div>
+              <div class="li fn">O'LEVEL CERTIFICATE</div>
+              <div class="li">Pending</div>
+              <button class="li delete_btn">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="../main.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

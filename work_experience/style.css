@@ -1,12 +1,9 @@
-a {
-  color: black;
-}
-
 .profile__wrapper {
   display: flex;
   gap: 30px;
   align-items: flex-start;
   margin-top: 20px;
+  min-width: 700px;
 }
 
 .profile {
@@ -30,25 +27,11 @@ a {
   width: 180px;
   margin-bottom: 20px;
 }
-
-.data_card {
-  padding: 5px 12px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  cursor: pointer;
+.ex {
+  text-align: left;
+  width: 100%;
 }
 
-.icon {
-  height: 40px;
-}
-
-.data h6 {
-  margin-bottom: 4px;
-  font-size: 14px;
-}
-
-.data p {
-  margin-bottom: 14px;
-  font-weight: 500;
+hr {
+  margin: 10px 0;
 }

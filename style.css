@@ -36,7 +36,7 @@ a {
 
 ._section__logo {
   margin-bottom: 10px;
-  width: 20%;
+  width: 10%;
 }
 
 ._section__text {
@@ -60,6 +60,10 @@ a {
   background-color: var(--green);
 }
 
+._button:disabled {
+  cursor: not-allowed;
+}
+
 label {
   display: block;
   text-align: left;
@@ -69,7 +73,8 @@ label {
 }
 
 input,
-select {
+select,
+textarea {
   display: block;
   text-align: left;
   margin-bottom: 10px;
@@ -88,4 +93,20 @@ small {
   color: red;
   margin-top: -10px;
   margin-bottom: 10px;
+}
+
+.border {
+  border: 1px dotted black;
+  border-radius: 4px;
+}
+
+.snippet {
+  font-weight: 700;
+  margin-bottom: 5px;
+  padding: 5px;
+  background: #e9f3f5;
+  border-radius: 4px;
+}
+.snippet span {
+  color: #09519d;
 }
