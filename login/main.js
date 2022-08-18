@@ -2,8 +2,8 @@ const inputs = document.querySelectorAll("input");
 const login = document.querySelector("#login");
 
 const values = {
-  emailOrId: "johnsmith@example.com",
-  password: "1234"
+  emailOrId: "",
+  password: ""
 };
 
 inputs.forEach((i) => {
@@ -25,7 +25,6 @@ login.addEventListener("click", async () => {
     }
   }
 
-  console.log({ values });
   try {
     disableBtn("login");
     const res = await loginFn({
@@ -44,7 +43,6 @@ login.addEventListener("click", async () => {
       saveToLS("user", res.user);
       window.location.replace("/profile/");
     }
-    window.location.replace("/profile/");
   } catch (error) {
     console.log(error);
   }

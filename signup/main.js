@@ -2,10 +2,10 @@ const inputs = document.querySelectorAll("input");
 const signup = document.querySelector("#signup");
 
 const values = {
-  email: "johnsmith@example.com",
-  phonenumber: "08103826574",
-  password: "1234",
-  confirmpassword: "1234"
+  email: "",
+  phonenumber: "",
+  password: "",
+  confirmpassword: ""
 };
 
 inputs.forEach((i) => {

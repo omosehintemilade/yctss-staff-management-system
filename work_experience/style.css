@@ -32,6 +32,12 @@
   width: 100%;
 }
 
+.ex_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 hr {
   margin: 10px 0;
 }

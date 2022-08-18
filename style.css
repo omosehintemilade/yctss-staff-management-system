@@ -110,3 +110,16 @@ small {
 .snippet span {
   color: #09519d;
 }
+
+.delete_btn {
+  transition: all 0.2s linear;
+  background-color: #f61111;
+  outline: none;
+  border: transparent;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+.delete_btn:hover {
+  background-color: #bf0f0f;
+}

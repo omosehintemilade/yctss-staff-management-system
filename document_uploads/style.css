@@ -90,11 +90,3 @@
   width: 65px;
   margin-right: 10px;
 }
-
-.delete_btn {
-  background-color: #f61111;
-  outline: none;
-  border: transparent;
-  font-weight: 500;
-  border-radius: 4px;
-}

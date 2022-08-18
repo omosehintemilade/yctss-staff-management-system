@@ -65,24 +65,24 @@ img_wrapper.addEventListener("mouseleave", () => {
 });
 
 edit.addEventListener("click", async () => {
-  // for (const s of selects) {
-  //   if (!values[s.name]) {
-  //     const err = document.querySelector(`.${s.name}_error`);
-  //     err.style.display = "block";
-  //     s.focus();
-  //     return;
-  //   }
-  // }
-  // for (const i of inputs) {
-  //   if (i.type != "file") {
-  //     if (!values[i.name]) {
-  //       const err = document.querySelector(`.${i.name}_error`);
-  //       err.style.display = "block";
-  //       i.focus();
-  //       return;
-  //     }
-  //   }
-  // }
+  for (const s of selects) {
+    if (!values[s.name]) {
+      const err = document.querySelector(`.${s.name}_error`);
+      err.style.display = "block";
+      s.focus();
+      return;
+    }
+  }
+  for (const i of inputs) {
+    if (i.type != "file") {
+      if (!values[i.name]) {
+        const err = document.querySelector(`.${i.name}_error`);
+        err.style.display = "block";
+        i.focus();
+        return;
+      }
+    }
+  }
 
   // saveToDB(updatedUser);
   try {

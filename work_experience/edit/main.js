@@ -3,13 +3,7 @@ const edit = document.querySelector("#add");
 
 const user = getFromDB();
 console.log({ user });
-const values = {
-  name: "Omosehin Ifeoluwa Olayinka",
-  started: "62637",
-  ended: "474yr8474",
-  position: "44u",
-  subject: "hello world"
-};
+const values = {};
 
 inputs.forEach((i) => {
   i.addEventListener("change", ({ target }) => {
@@ -20,14 +14,14 @@ inputs.forEach((i) => {
 });
 
 edit.addEventListener("click", async () => {
-  // for (const i of inputs) {
-  //   if (!values[i.name]) {
-  //     const err = document.querySelector(`.${i.name}_error`);
-  //     err.style.display = "block";
-  //     i.focus();
-  //     return;
-  //   }
-  // }
+  for (const i of inputs) {
+    if (!values[i.name]) {
+      const err = document.querySelector(`.${i.name}_error`);
+      err.style.display = "block";
+      i.focus();
+      return;
+    }
+  }
 
   console.log({ values });
   disableBtn("add");
